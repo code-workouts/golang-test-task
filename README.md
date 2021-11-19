@@ -2,17 +2,17 @@
 
 Run a docker container with a command as a serverless and upstream the logs to aws cloudwatch with given AWS credentials.
 
-## Dependencies
+#### Dependencies
 ```bash
 go mod tidy
 ```
 
-## Build
+### Build
 ```bash
 go build .
 ```
 
-## Run
+### Run
 ```bash
 ./golang-test-task --docker-image python \
 --bash-command 'pip install pip -U && pip install tqdm && python -c "exec(\"import time\ncounter = 0\nwhile True:\n  print(counter)\n  counter= counter + 1\n  time.sleep(0.1)\")"' \
